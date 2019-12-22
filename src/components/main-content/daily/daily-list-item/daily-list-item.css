@@ -1,0 +1,41 @@
+.daily-item-container {
+    border: 0.1rem transperent;
+    background-color: #fff;
+    padding: 1.5rem 1rem;
+    border-radius: 2rem;
+}
+
+.daily-list-container > p , div {
+    text-align: center;
+}
+
+.nick {
+    margin: 1rem 0rem;
+}
+
+.name {
+    margin: 1rem 0rem;
+    color: #999;
+}
+
+.advanced-info {
+    margin: 1rem 0rem;
+}
+
+.follow-btn {
+    width: 80%;
+    margin: auto;
+    padding: 0.3rem 0rem;
+    background-color: rgba(var(--h5f,56,151,240),1);
+    color: #fff;
+    border-radius: 0.3rem;
+}
+
+.profile-img {
+    display: block;
+    max-width: 50%;
+    margin: auto;
+    height: auto;
+    border: 0.1rem transparent;
+    border-radius: 50%;
+}

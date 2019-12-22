@@ -1,12 +1,13 @@
 import React from 'react';
 import './daily-list.css';
+import DailyListItem from '../daily-list-item';
 
 class DailyList extends React.Component {
     render () {
         return (
-            <div className="daily-list">
-                List
-            </div>
+            <ul className="daily-list">
+                <DailyListItem />
+            </ul>
         )
     }
 }
