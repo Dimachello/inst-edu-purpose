@@ -6,13 +6,12 @@ import history from "../history";
 import Footer from "../registration/footer";
 
 class EnterWindow extends React.Component {
-
-  onShow () {
+  onShow() {
     const pswd = document.querySelector(".pswd-container");
-    if (pswd.type === 'password'){
-      pswd.type = 'text'
+    if (pswd.type === "password") {
+      pswd.type = "text";
     } else {
-      pswd.type = 'password';
+      pswd.type = "password";
     }
   }
 
@@ -30,7 +29,7 @@ class EnterWindow extends React.Component {
     if (login.value === login_value && pswd.value === pswd_value) {
       history.replace("/main/daily");
     } else {
-      alert("Incorrect login or pswd !");
+      alert("Шо сука пароль запомнить не можешь ");
     }
   }
 
@@ -42,10 +41,18 @@ class EnterWindow extends React.Component {
           <input
             className="login"
             type="text"
+            required
             placeholder="Моб. телефон или эл. адрес"
           ></input>
-          <input className="pswd-container" type="password" placeholder="Пароль"></input>
-          <div className="show-pswd" onClick={this.onShow}>Show</div>
+          <input
+            className="pswd-container"
+            type="password"
+            required
+            placeholder="Пароль"
+          ></input>
+          <div className="show-pswd" onClick={this.onShow}>
+            Show
+          </div>
           <button className="reg-btn" onClick={this.onEnter}>
             Войти
           </button>
