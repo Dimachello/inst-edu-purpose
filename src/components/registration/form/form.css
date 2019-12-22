@@ -1,0 +1,59 @@
+.reg-form {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem 0rem 2rem;
+}
+
+.reg-btn {
+    display: block;
+    width: 100%;
+    border: 0px;
+    line-height: 2rem;
+    background-color: rgba(var(--h5f,56,151,240),1);
+    color: rgba(var(--eca,255,255,255),1);
+    border-radius: 0.25rem;
+}
+
+.fb-icon {
+    display: inline-block;
+    position: relative;
+    top: 0.25rem;
+    margin-right: 1rem;
+    background-image: url(../../../imgs/icons/facebook-black24.png);
+    background-repeat: no-repeat;
+    width: 1.5rem;
+    height: 1.3rem;
+}
+
+.phrase-container {
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-part, .right-part {
+    flex-basis: 40%;
+    height: 0.05rem;
+    background-color: #fefefe;
+    background-color: #999;
+}
+
+.phrase {
+    flex-basis: 20%;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #999;
+}
+
+.reg-form > input {
+    display: block;
+    margin-bottom: 0.5rem;
+    padding: 0.3rem;
+    border: 0.01rem solid #999;
+    border-radius: 0.25rem;
+    line-height: 1rem;
+    font-size: 0.8rem;
+}
+

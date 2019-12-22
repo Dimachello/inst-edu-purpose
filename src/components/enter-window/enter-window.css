@@ -1,0 +1,25 @@
+.enter-reg-btn {
+    margin-bottom: 1.5rem;
+    background-color: #fff;
+    color: rgba(var(--h5f,56,151,240),1);
+    font-size: 0.8rem;
+}
+
+.psw-res-link {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 0.6rem;
+}
+
+.reg-link {
+    margin-bottom: 1.5rem;
+    font-size: 0.7rem;
+}
+
+.reg-redirect-link {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.5rem;
+    color: rgba(var(--fe0,0,53,105),1);
+    cursor: pointer;
+}

@@ -1,0 +1,28 @@
+.logo-print {
+    display: block;
+    padding: 1rem 5rem 0rem 5rem;
+    width: 100%;
+    height: auto;
+}
+
+.greet , .conditions {
+    padding: 1rem 2rem 0rem 2rem;
+    text-align: center;
+    color: #999;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.conditions {
+    font-size: 0.7rem;
+}
+
+.enter-link {
+    margin: 1.5rem 0rem 1.5rem 0rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.enter-link > span {
+    cursor: pointer;
+}
