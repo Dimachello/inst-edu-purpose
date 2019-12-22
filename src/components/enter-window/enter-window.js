@@ -6,6 +6,16 @@ import history from "../history";
 import Footer from "../registration/footer";
 
 class EnterWindow extends React.Component {
+
+  onShow () {
+    const pswd = document.querySelector(".pswd-container");
+    if (pswd.type === 'password'){
+      pswd.type = 'text'
+    } else {
+      pswd.type = 'password';
+    }
+  }
+
   onUnExist() {
     history.replace("/");
   }
@@ -13,7 +23,7 @@ class EnterWindow extends React.Component {
   onEnter(event) {
     event.preventDefault();
     const login = document.querySelector(".login");
-    const pswd = document.querySelector(".pswd");
+    const pswd = document.querySelector(".pswd-container");
     const login_value = "dima";
     const pswd_value = "123";
 
@@ -28,13 +38,14 @@ class EnterWindow extends React.Component {
     return (
       <div>
         <img className="logo-print" src={printedLogo} alt="print-logo" />
-        <form className="reg-form">
+        <form className="reg-form enter-reg-form">
           <input
             className="login"
             type="text"
             placeholder="Моб. телефон или эл. адрес"
           ></input>
-          <input className="pswd" type="text" placeholder="Пароль"></input>
+          <input className="pswd-container" type="password" placeholder="Пароль"></input>
+          <div className="show-pswd" onClick={this.onShow}>Show</div>
           <button className="reg-btn" onClick={this.onEnter}>
             Войти
           </button>

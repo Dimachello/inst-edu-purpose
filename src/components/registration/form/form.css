@@ -12,6 +12,7 @@
     background-color: rgba(var(--h5f,56,151,240),1);
     color: rgba(var(--eca,255,255,255),1);
     border-radius: 0.25rem;
+    cursor: pointer;
 }
 
 .fb-icon {

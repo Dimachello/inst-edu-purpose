@@ -6,11 +6,6 @@ import EnterWindow from "../enter-window";
 import MainWindow from "../main-content/main-window";
 
 class App extends React.Component {
-  // componentDidMount() {
-  //   localStorage.setItem("login", "dima");
-  //   localStorage.setItem("psw", "123");
-  // }
-
   render() {
     return (
       <Switch>
