@@ -3,7 +3,8 @@
     display: flex;
     /* padding-bottom: 40rem; */
     /* justify-content: space-between; */
-    /* overflow-x: auto; */
+    overflow: hidden;
+    overflow-x: auto;
     list-style: none;
     /* padding: 1rem 4rem; */
     /* padding-right: 4rem; */
