@@ -11,19 +11,19 @@ const Dock = () => {
     return (
         <nav className="chapters-container">
           <div className="chapter">
-              <Link to=""><img src={house} alt="home"/></Link>
+              <Link to="/main/daily"><img src={house} alt="home"/></Link>
           </div>
           <div className="chapter">
-              <Link to=""><img src={search} alt="search"/></Link>
+              <Link to="/main/search"><img src={search} alt="search"/></Link>
           </div>
           <div className="chapter">
-              <Link to=""><img src={add} alt="add"/></Link>
+              <Link to="/main/daily"><img src={add} alt="add"/></Link>
           </div>
           <div className="chapter">
-              <Link to=""><img src={like} alt="like"/></Link>
+              <Link to="/main/likes"><img src={like} alt="like"/></Link>
           </div>
           <div className="chapter">
-              <Link to=""><img src={user} alt="user"/></Link>
+              <Link to="/main/user"><img src={user} alt="user"/></Link>
           </div>
         </nav>
     )

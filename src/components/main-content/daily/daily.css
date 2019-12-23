@@ -2,7 +2,6 @@
     min-height: 100vh;
     padding-bottom: 5rem;
     background-color: rgb(237, 241, 247);
-    /* overflow: hidden; */
 }
 
 .daily-nav {
@@ -13,6 +12,10 @@
     align-items: center;
     border-bottom: 0.1rem solid #999;
     background-color: #fff;
+}
+
+.upload {
+    cursor: pointer;
 }
 
 .daily-logo-print {
