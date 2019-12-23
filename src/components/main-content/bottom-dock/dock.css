@@ -1,9 +1,9 @@
 .chapters-container {
-    padding: 0.7rem 0.7rem;
+    padding: 1rem 0.7rem;
     display: flex;
     position: fixed;
     width: 100%;
-    top: 92.5%;
+    top: 91%;
     justify-content: space-between;
     border-top: 0.1rem solid #999;
     background-color: #fff;

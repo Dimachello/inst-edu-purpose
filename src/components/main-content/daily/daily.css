@@ -1,7 +1,8 @@
 .daily {
     min-height: 100vh;
-    padding-bottom: 5rem;
+    padding-bottom: 7rem;
     background-color: rgb(237, 241, 247);
+    overflow-y: hidden;
 }
 
 .daily-nav {
