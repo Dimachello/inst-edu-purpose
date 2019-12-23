@@ -1,15 +1,16 @@
 .daily {
-    height: 100%;
+    min-height: 100vh;
     background-color: rgb(237, 241, 247);
 }
 
 .daily-nav {
-    padding: 0rem 0.5rem;
+    padding: 0.2rem 0.8rem 0rem 0.8rem;
     margin-bottom: 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 0.1rem solid #999;
+    background-color: #fff;
 }
 
 .daily-logo-print {
@@ -24,7 +25,7 @@
 
 .daily > p {
     width: 90%;
-    margin: auto;
+    margin: 0rem auto 1.5rem auto;
     text-align: center;
     font-size: 0.8rem;
     color: #999;

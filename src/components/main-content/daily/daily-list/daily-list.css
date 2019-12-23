@@ -1,5 +1,10 @@
 .daily-list {
+    max-width: 100rem;
+    display: flex;
+    /* justify-content: space-between; */
+    overflow-x: visible;
     list-style: none;
-    padding: 1rem 4rem;
+    /* padding: 1rem 4rem; */
+    /* padding-right: 4rem; */
     background-color: rgb(237, 241, 247);
 }

@@ -7,10 +7,10 @@ import Dock from '../bottom-dock';
 class MainWindow extends React.Component {
     render () {
         return (
-            <React.Fragment>
+            <div className="main-window">
             <Route path="/main/daily" component={Daily} />
             <Dock />
-            </React.Fragment>
+            </div>
         )
     }
 }
