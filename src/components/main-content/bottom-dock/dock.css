@@ -3,8 +3,26 @@
     display: flex;
     position: fixed;
     width: 100%;
-    top: 91%;
+    top: 90%;
     justify-content: space-between;
     border-top: 0.1rem solid #999;
     background-color: #fff;
+}
+
+.chapter {
+    padding: 0.2rem 0.4rem;
+    border: 0.1rem solid transparent;
+    border-radius: 0.2rem;
+}
+
+.chap-link {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.chap-link > img {
+    display: block;
+    width: 100%;
+    height: auto;
 }

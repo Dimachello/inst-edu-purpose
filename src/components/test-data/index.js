@@ -5,6 +5,7 @@ import bmw2 from '../../imgs/daily-list/bmw2_150.jpg';
 
 const data = [
     {
+        id:1,
         profilePhotoUrl: shrek,
         nick: 'jet.frixon',
         name: 'jet',
@@ -12,6 +13,7 @@ const data = [
         status: 'Instagram recomended'
     },
     {
+        id:2,
         profilePhotoUrl: audi,
         nick: 'au.of',
         name: 'audion',
@@ -19,6 +21,7 @@ const data = [
         status: 'Instagram recomended'
     },
     {
+        id:3,
         profilePhotoUrl: bmw,
         nick: 'b.m.w',
         name: 'beta',
@@ -26,6 +29,7 @@ const data = [
         status: 'Instagram recomended'
     },
     {
+        id:4,
         profilePhotoUrl: bmw2,
         nick: 'nest_gen',
         name: 'alpha',

@@ -8,7 +8,8 @@ class DailyList extends React.Component {
     showItems () {
         const items = data.map((item) => {
            return (
-               <DailyListItem 
+               <DailyListItem
+                key={item.id} 
                 profilePhotoUrl={item.profilePhotoUrl}
                 nick={item.nick}
                 name={item.name}
