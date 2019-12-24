@@ -1,12 +1,14 @@
 import React from 'react';
 import './daily-list.css';
 import DailyListItem from '../daily-list-item';
-import data from '../../../test-data';
+import { connect } from 'react-redux';
 
 class DailyList extends React.Component {
 
     showItems () {
-        const items = data.map((item) => {
+        const { dailyItems } = this.props;
+
+        const items = dailyItems.map((item) => {
            return (
                <DailyListItem
                 key={item.id} 
@@ -32,4 +34,10 @@ class DailyList extends React.Component {
     }
 }
 
-export default DailyList;
+const mapStateToProps = (state) => {
+    return {
+        dailyItems: state.dailyItems
+    }
+}
+
+export default connect(mapStateToProps)(DailyList);

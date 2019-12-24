@@ -9,16 +9,21 @@
     background-color: #fff;
 }
 
-.chapter {
+.chapter  {
     padding: 0.2rem 0.4rem;
-    border: 0.1rem solid transparent;
-    border-radius: 0.2rem;
+    /* border: 0.1rem solid transparent;
+    border-radius: 0.2rem; */
+}
+
+.on-hover {
+    background-color: #999;
 }
 
 .chap-link {
     display: block;
     width: 100%;
     height: auto;
+    text-decoration: none;
 }
 
 .chap-link > img {
