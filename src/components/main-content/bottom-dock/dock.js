@@ -17,7 +17,7 @@ const Dock = () => {
               <Link className="chap-link" to="/main/search"><img src={search} alt="search"/></Link>
           </div>
           <div className="chapter">
-              <Link className="chap-link" to="/main/daily"><img src={add} alt="add"/></Link>
+              <Link className="chap-link" to="/main/upload"><img src={add} alt="add"/></Link>
           </div>
           <div className="chapter">
               <Link className="chap-link" to="/main/likes"><img src={like} alt="like"/></Link>

@@ -1,0 +1,95 @@
+.user-profile > nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem 0.7rem;
+    border-bottom: 0.1rem solid #999;
+}
+
+.manage-info {
+    padding-top: 1rem;
+}
+
+.manage-info > div {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.manage-info > div > img {
+    flex-basis: 25%;
+    display: block;
+    border-radius: 50%;
+}
+
+.manage-info > div > article {
+    flex-basis: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* padding-top: 0.5rem; */
+}
+
+.manage-info > div > article > button {
+    width: 100%;
+    margin-top: 0.5rem;
+    border: 0.1rem solid #999;
+    padding: 0.3rem 0rem;
+    border-radius: 0.4rem;
+    background-color: #fff;
+    /* color: #999; */
+    font-weight: 700;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.manage-info > p {
+    padding: 0.5rem;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.profile-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 3rem;
+    border-top: 0.1rem solid #999;
+    border-bottom: 0.1rem solid #999;
+    opacity: 0.5;
+}
+
+.photos > div {
+    padding: 0.7rem 0.7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* min-height: 3rem; */
+    /* border-top: 0.1rem solid #999; */
+    border-bottom: 0.1rem solid #999;
+    opacity: 0.5;
+}
+
+.profile-info {
+    padding: 0.3rem 0.7rem;
+}
+
+.profile-info > article {
+    padding: 0.3rem 0rem;
+}
+
+.profile-info > article > p {
+    text-align: center;
+}
+
+.profile-info > article > p:first-child {
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.profile-info > article > p:last-child {
+    color: #999;
+    font-size: 0.8rem;
+}

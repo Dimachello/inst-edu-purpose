@@ -5,6 +5,7 @@ import Daily from '../daily';
 import Direct from '../direct';
 import Dock from '../bottom-dock';
 import Search from '../search';
+import UploadFiles from '../upload-files';
 import Likes from '../likes';
 import Profile from '../profile';
 
@@ -15,6 +16,7 @@ class MainWindow extends React.Component {
             <Route path="/main/daily" component={Daily} />
             <Route path="/main/direct" component={Direct} />
             <Route path="/main/search" component={Search} />
+            <Route path="/main/upload" component={UploadFiles} />
             <Route path="/main/likes" component={Likes} />
             <Route path="/main/user" component={Profile} />
             <Dock />

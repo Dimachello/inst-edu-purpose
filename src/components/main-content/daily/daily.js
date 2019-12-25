@@ -5,14 +5,9 @@ import camera from '../../../imgs/icons/camera24.png';
 import direct from '../../../imgs/icons/telegram24.png';
 import DailyList from './daily-list'; 
 
-// import history from '../../history';
 import { Link } from 'react-router-dom';
 
 class Daily extends React.Component {
-
-    // showDirect () {
-    //     history.
-    // }
 
     render () {
         return (

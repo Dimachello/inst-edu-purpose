@@ -1,0 +1,15 @@
+.search-wrapper {
+    padding-top: 0.5rem;
+}
+
+.search-wrapper > header > input {
+    width: 90%;
+    display: block;
+    margin: auto;
+    padding: 0.3rem 0rem 0.3rem 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+    background: url(../../../imgs/icons/search16.png) no-repeat scroll 0.3rem ;
+    border: 0.1rem solid #999;
+    border-radius: 0.3rem;
+}
