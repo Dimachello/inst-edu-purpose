@@ -13,10 +13,10 @@ class Form extends React.Component {
                     <div className="right-part"></div>
                 </div>
 
-                <input type="text" placeholder="Моб. телефон или эл. адрес"></input>
-                <input type="text" placeholder="Имя и фамилия"></input>
-                <input type="text" placeholder="Имя пользователя"></input>
-                <input type="text" placeholder="Пароль"></input>
+                <input type="text" placeholder="Моб. телефон или эл. адрес" />
+                <input type="text" placeholder="Имя и фамилия" />
+                <input type="text" placeholder="Имя пользователя" />
+                <input type="text" placeholder="Пароль" />
 
                 <button className="reg-btn">Регистрация</button>
 

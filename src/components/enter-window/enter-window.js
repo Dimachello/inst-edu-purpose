@@ -6,6 +6,13 @@ import history from "../history";
 import Footer from "../registration/footer";
 
 class EnterWindow extends React.Component {
+
+  // constructor (props) {
+  //   super(props);
+
+  //   this.username = React.createRef()
+  // }
+
   onShow() {
     const pswd = document.querySelector(".pswd-container");
     if (pswd.type === "password") {
@@ -23,13 +30,13 @@ class EnterWindow extends React.Component {
     event.preventDefault();
     const login = document.querySelector(".login");
     const pswd = document.querySelector(".pswd-container");
-    const login_value = "dima";
+    const login_value = "Dima";
     const pswd_value = "123";
 
     if (login.value === login_value && pswd.value === pswd_value) {
       history.replace("/main/daily");
     } else {
-      alert("Шо сука пароль запомнить не можешь ");
+      alert("Login or password is incorrect");
     }
   }
 
@@ -43,13 +50,13 @@ class EnterWindow extends React.Component {
             type="text"
             required
             placeholder="Моб. телефон или эл. адрес"
-          ></input>
+          />
           <input
             className="pswd-container"
             type="password"
             required
             placeholder="Пароль"
-          ></input>
+          />
           <div className="show-pswd" onClick={this.onShow}>
             Show
           </div>

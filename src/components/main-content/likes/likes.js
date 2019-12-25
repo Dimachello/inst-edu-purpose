@@ -1,14 +1,67 @@
-import React from 'react';
-import './likes.css';
+import React from "react";
+import "./likes.css";
+import ActivityItem from "./activity-item";
+import RecomendItem from "./recomend-item";
+import { connect } from "react-redux";
 
 class Likes extends React.Component {
-    render () {
+  showItems(listId) {
+    const { activityItems } = this.props;
+    const { recomendationItems } = this.props;
+    let items;
+
+    if (listId === 1) {
+      items = activityItems.map(item => {
         return (
-            <div>
-                Likes
-            </div>
-        )
+          <ActivityItem
+            key={item.id}
+            profilePhotoUrl={item.profilePhotoUrl}
+            nick={item.nick}
+            activityDate={item.date}
+          />
+        );
+      });
+    } else {
+      items = recomendationItems.map(item => {
+        return (
+          <RecomendItem
+            key={item.id}
+            profilePhotoUrl={item.profilePhotoUrl}
+            name={item.name}
+            nick={item.nick}
+            status={item.status}
+          />
+        );
+      });
     }
+
+    return items;
+  }
+
+  render() {
+    const activityItems = this.showItems(1);
+    const recomendationItems = this.showItems(2);
+
+    return (
+      <div className="likes">
+        <p className="activity-title">Activity</p>
+        <div className="activity-wrapper">
+          <ul className="activity-container">{[...activityItems]}</ul>
+        </div>
+        <p className="suggest">Suggestions for you</p>
+        <div className="likes-wrapper">
+          <ul className="likes-container">{[...recomendationItems]}</ul>
+        </div>
+      </div>
+    );
+  }
 }
 
-export default Likes;
+const mapStateToProps = state => {
+  return {
+    activityItems: state.activityItems,
+    recomendationItems: state.recomendationItems
+  };
+};
+
+export default connect(mapStateToProps)(Likes);

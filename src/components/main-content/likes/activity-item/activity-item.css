@@ -1,0 +1,51 @@
+.activity-item , .recomend-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem 0.6rem;
+}
+
+.activity-info , .recomend-info {
+    flex-basis: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.activity-info > img {
+    max-height: 3rem;
+    display: block;
+    border-radius: 50%;
+}
+
+.activity-info > article{
+    flex-basis: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.activity-nick , .recomend-nick {
+    font-weight: 700;
+    font-size: 0.7rem;
+}
+
+.activity-date , .recomend-name , .recomend-status {
+    color: #999;
+    font-size: 0.7rem;
+}
+
+.activity-date > span {
+    color: #000;
+    font-size: 0.7rem;
+}
+
+.activity-item > button {
+    padding: 0.3rem 0.8rem;
+    background-color: rgba(var(--h5f,56,151,240),1);
+    color: #fff;
+    border: 0.1rem solid transparent;
+    border-radius: 0.3rem;
+    font-size: 0.8rem;
+}

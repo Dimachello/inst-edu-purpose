@@ -1,6 +1,5 @@
 import React from 'react';
 import './registration.css';
-// import { Link } from 'react-router-dom';
 import history from '../history';
 import printedLogo from '../../imgs/logo-print.png'
 import Form from './form';

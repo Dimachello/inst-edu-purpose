@@ -1,0 +1,24 @@
+.likes > p {
+    font-weight: 700;
+}
+
+.activity-title {
+    padding: 0.5rem 0rem;
+    border-bottom: 0.1rem solid #999;
+    text-align: center;
+}
+
+.suggest {
+    padding: 1rem 0rem 1rem 0.5rem;
+    padding-left: 0.5rem;
+    font-size: 0.9rem
+}
+
+.likes > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
