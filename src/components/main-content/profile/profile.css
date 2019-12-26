@@ -21,7 +21,7 @@
     flex-basis: 25%;
     display: block;
     width: 100%;
-    height: auto;
+    max-height: 50%;
     /* border-radius: 50%; */
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
