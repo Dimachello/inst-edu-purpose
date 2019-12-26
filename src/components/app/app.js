@@ -11,25 +11,9 @@ import Search from "../main-content/search";
 import UploadFiles from "../main-content/upload-files";
 import Likes from "../main-content/likes";
 import Profile from "../main-content/profile";
-// import Spinner from "../spinner/spinner";
+import Error from '../404/error';
 
 class App extends React.Component {
-
-  // constructor (props) {
-  //   super(props);
-
-  //   this.state = {
-  //     isLoading: true
-  //   }
-  // }
-
-  // componentDidMount () {
-  //  if (this.state.isLoading) {
-  //   // <Spinner />
-  //   // setTimeout(this.setState({isLoading: false}),1000)
-  //  }
-  // }
-
   render() {
     const { loginConfirmed } = this.props;
 
@@ -44,6 +28,7 @@ class App extends React.Component {
           <Route path="/upload" component={UploadFiles} />
           <Route path="/likes" component={Likes} />
           <Route path="/user" component={Profile} />
+          <Route render={() => <Error />} />
         </Switch>
         {loginConfirmed ? <Dock /> : null}
       </React.Fragment>
