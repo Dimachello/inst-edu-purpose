@@ -23,12 +23,9 @@ class DailyList extends React.Component {
     }
 
     render () {
-
-        const items = this.showItems();
-
         return (
             <ul className="daily-list">
-               {[...items]}
+               {this.showItems()}
             </ul>
         )
     }

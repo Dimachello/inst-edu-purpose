@@ -2,10 +2,17 @@ import React from "react";
 import "./enter-window.css";
 import printedLogo from "../../imgs/logo-print.png";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 import history from "../history";
 import Footer from "../registration/footer";
 
 class EnterWindow extends React.Component {
+
+  constructor (props) {
+    super(props);
+
+    this.onEnter = this.onEnter.bind(this);
+  }
 
   onShow() {
     const pswd = document.querySelector(".pswd-container");
@@ -26,9 +33,10 @@ class EnterWindow extends React.Component {
     const pswd = document.querySelector(".pswd-container");
     const login_value = "Dima";
     const pswd_value = "123";
-
+    const {loginCheck} = this.props;
     if (login.value === login_value && pswd.value === pswd_value) {
-      history.replace("/main/daily");
+      history.replace("/daily");
+      loginCheck();
     } else {
       alert("Login or password is incorrect");
     }
@@ -81,4 +89,16 @@ class EnterWindow extends React.Component {
   }
 }
 
-export default EnterWindow;
+const mapStateToProps = (state) => {
+  return {
+    state
+  }
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return ({
+    loginCheck: () => dispatch({type: "LOGIN_CONFIRMED"})
+  });
+};
+
+export default connect(mapStateToProps,mapDispatchToProps)(EnterWindow);

@@ -39,18 +39,15 @@ class Likes extends React.Component {
   }
 
   render() {
-    const activityItems = this.showItems(1);
-    const recomendationItems = this.showItems(2);
-
     return (
       <div className="likes">
         <p className="activity-title">Activity</p>
         <div className="activity-wrapper">
-          <ul className="activity-container">{[...activityItems]}</ul>
+          <ul className="activity-container">{this.showItems(1)}</ul>
         </div>
         <p className="suggest">Suggestions for you</p>
         <div className="likes-wrapper">
-          <ul className="likes-container">{[...recomendationItems]}</ul>
+          <ul className="likes-container">{this.showItems(2)}</ul>
         </div>
       </div>
     );
