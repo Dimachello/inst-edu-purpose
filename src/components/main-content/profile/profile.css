@@ -20,6 +20,12 @@
 .manage-info > div > img {
     flex-basis: 25%;
     display: block;
+    width: 100%;
+    height: auto;
+    /* border-radius: 50%; */
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -khtml-border-radius: 50%;
     border-radius: 50%;
 }
 
@@ -58,7 +64,7 @@
     min-height: 3rem;
     border-top: 0.1rem solid #999;
     border-bottom: 0.1rem solid #999;
-    opacity: 0.5;
+    /* opacity: 0.5; */
 }
 
 .photos > div {
@@ -69,7 +75,7 @@
     /* min-height: 3rem; */
     /* border-top: 0.1rem solid #999; */
     border-bottom: 0.1rem solid #999;
-    opacity: 0.5;
+    /* opacity: 0.5; */
 }
 
 .profile-info {
