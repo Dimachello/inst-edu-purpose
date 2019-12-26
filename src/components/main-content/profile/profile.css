@@ -20,12 +20,7 @@
 .manage-info > div > img {
     flex-basis: 25%;
     display: block;
-    width: 100%;
-    max-height: 50%;
-    /* border-radius: 50%; */
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -khtml-border-radius: 50%;
+    max-width: 6rem;
     border-radius: 50%;
 }
 
@@ -35,7 +30,6 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    /* padding-top: 0.5rem; */
 }
 
 .manage-info > div > article > button {
@@ -45,7 +39,6 @@
     padding: 0.3rem 0rem;
     border-radius: 0.4rem;
     background-color: #fff;
-    /* color: #999; */
     font-weight: 700;
     font-size: 0.8rem;
     cursor: pointer;
@@ -64,7 +57,6 @@
     min-height: 3rem;
     border-top: 0.1rem solid #999;
     border-bottom: 0.1rem solid #999;
-    /* opacity: 0.5; */
 }
 
 .photos > div {
@@ -72,10 +64,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* min-height: 3rem; */
-    /* border-top: 0.1rem solid #999; */
     border-bottom: 0.1rem solid #999;
-    /* opacity: 0.5; */
 }
 
 .profile-info {
