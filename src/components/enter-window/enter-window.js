@@ -7,12 +7,6 @@ import Footer from "../registration/footer";
 
 class EnterWindow extends React.Component {
 
-  // constructor (props) {
-  //   super(props);
-
-  //   this.username = React.createRef()
-  // }
-
   onShow() {
     const pswd = document.querySelector(".pswd-container");
     if (pswd.type === "password") {
