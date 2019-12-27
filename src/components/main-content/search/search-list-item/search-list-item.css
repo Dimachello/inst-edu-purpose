@@ -1,0 +1,32 @@
+/* .search-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start; 
+ padding-bottom: 0.3rem;
+} */
+
+.search-item > img {
+    display: block;
+    margin-bottom: 0.3rem;
+    width: 100%;
+    height: auto;
+}
+
+.author {
+    flex-basis: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem;
+}
+
+.author > img {
+    display: block;
+    flex-basis: 7%;
+}
+
+.author > span {
+    flex-basis: 80%;
+    text-align: end;
+}

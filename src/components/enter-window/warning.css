@@ -1,0 +1,25 @@
+.warning-wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(218, 211, 211);
+    padding: 0rem 3rem;
+}
+
+.warning-container {
+    padding: 1rem 2rem;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 4rem;
+}
+
+.warning-container > div {
+    margin-top: 1rem;
+    padding: 0.2rem 0rem;
+    text-transform: uppercase;
+    border: 0.1rem solid #999;
+    border-radius: 3rem;
+    color: red;
+    cursor: pointer;
+}

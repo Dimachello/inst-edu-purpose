@@ -1,0 +1,8 @@
+.search-list {
+    min-height: inherit;
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}

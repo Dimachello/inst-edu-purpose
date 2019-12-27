@@ -1,5 +1,10 @@
 .search-wrapper {
+    min-height: 100vh;
     padding-top: 0.5rem;
+}
+
+.search-wrapper > header {
+    margin-bottom: 1rem;
 }
 
 .search-wrapper > header > input {

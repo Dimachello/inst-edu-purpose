@@ -66,7 +66,7 @@ const initialState = {
 const reducer = (state = initialState, action) => {
     switch (action.type) {
         case "LOGIN_CONFIRMED":
-            return {...state, loginConfirmed : true};
+            return {...state, loginConfirmed : !state.loginConfirmed};
         default :
             return state;
     }
