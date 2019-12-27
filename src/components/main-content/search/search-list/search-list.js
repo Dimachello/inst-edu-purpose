@@ -15,29 +15,35 @@ class SearchList extends React.Component {
     this.showItems = this.showItems.bind(this);
   }
 
-  componentDidMount () {
-    fetch("https://picsum.photos/v2/list")
-        .then(resp => resp.json())
-        .then(data => {this.setState({
+  componentDidMount() {
+    fetch("https://picsum.photos/v2/list?limit=10")
+      .then(resp => resp.json())
+      .then(data => {
+        this.setState({
           items: data,
           isConsist: true
-        })})
-  } 
+        });
+      });
+  }
 
   showItems() {
-    if(this.state.isConsist){
-    return this.state.items.map((item) => {
-      return <SearchListItem key={item.id} url={item.download_url} name={item.author}/>;
-    });
-  } else {
-    return (
-      []
-    )
-  }
+    if (this.state.isConsist) {
+      return this.state.items.map(item => {
+        return (
+            <SearchListItem
+              key={item.id}
+              url={item.download_url}
+              name={item.author}
+            />
+        );
+      });
+    } else {
+      return [];
+    }
   }
 
   render() {
-    const list = (<ul className="search-list">{this.showItems()}</ul>);
+    const list = <ul className="search-list">{this.showItems()}</ul>;
     const content = !this.state.isConsist ? <Spinner /> : list;
 
     return content;
