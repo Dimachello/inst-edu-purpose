@@ -1,7 +1,9 @@
 import React from "react";
 import "./search-list.css";
+import SearchHeader from "./search-header";
 import SearchListItem from "../search-list-item";
 import Spinner from "../../../spinner/spinner";
+import Post from "../search-list-item/post/post";
 
 class SearchList extends React.Component {
   constructor(props) {
@@ -10,11 +12,13 @@ class SearchList extends React.Component {
     this.state = {
       items: [],
       isConsist: false,
-      isVisible: true
+      isClicked: false,
+      postUrl: "",
+      postAuthor: ""
     };
 
     this.showItems = this.showItems.bind(this);
-    this.hideItems = this.hideItems.bind(this);
+    this.handlePost = this.handlePost.bind(this);
   }
 
   componentDidMount() {
@@ -28,6 +32,14 @@ class SearchList extends React.Component {
       });
   }
 
+  handlePost (url,author) {
+    this.setState({
+      isClicked: !this.state.isClicked,
+      postUrl: url,
+      postAuthor: author
+    });
+  }
+
   showItems() {
     if (this.state.isConsist) {
       return this.state.items.map(item => {
@@ -35,8 +47,8 @@ class SearchList extends React.Component {
             <SearchListItem
               key={item.id}
               url={item.download_url}
-              name={item.author}
-              hideItems={this.hideItems}
+              author={item.author}
+              showPost={this.handlePost}
             />
         );
       });
@@ -45,16 +57,23 @@ class SearchList extends React.Component {
     }
   }
 
-  hideItems () {
-    // this.setState({isVisible: false})
-    console.log("hidden");
-  }
-
   render() {
-    const list = <ul className="search-list">{this.showItems()}</ul>;
-    const content = !this.state.isConsist ? <Spinner /> : list;
+    const list = <React.Fragment>
+      <SearchHeader />
+      <ul className="search-list">{this.showItems()}</ul>
+      </React.Fragment>
+    const content = this.state.isClicked ? <Post 
+    hidePost={this.handlePost}
+    url={this.state.postUrl}
+    author={this.state.postAuthor}
+    /> : list;
 
-    return content;
+    return (
+      <React.Fragment>
+      <Spinner isHidden={this.state.isConsist}/>
+       {content}
+      </React.Fragment>
+    )
   }
 }
 

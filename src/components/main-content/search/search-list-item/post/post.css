@@ -1,13 +1,62 @@
 .post {
-    position: absolute;
-    width: 100%;
-    min-height: 100vh;
+    min-height: inherit;
+}
+
+.post-top {
+    padding: 0rem 0.3rem 0.5rem 0rem;
+    margin-bottom: 0.3rem;
+    border-bottom: 0.1rem solid #999;
+}
+
+.post-top > img {
+    display: block;
+}
+
+.post-container > header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    background-color: #000;
+    padding: 0.3rem 0.3rem;
+}
+
+.post-container > header > img {
+    display: block;
+    max-width: 2rem;
+    height: auto;
+    border-radius: 50%;
+}
+
+.post-container > header > p {
+    text-align: center;
 }
 
 .post-info {
-    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.3rem 0.3rem;
+}
+
+.post-info > span {
+    flex-basis: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-info > span > img {
+    display: block;
+}
+
+.post-info > img {
+    display: block;
+}
+
+.comment {
+    min-height: 10rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.comment > input {
+    align-content: flex-end;
 }
