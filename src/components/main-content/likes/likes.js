@@ -3,6 +3,7 @@ import "./likes.css";
 import ActivityItem from "./activity-item";
 import RecomendItem from "./recomend-item";
 import { connect } from "react-redux";
+import Dock from '../bottom-dock';
 
 class Likes extends React.Component {
   showItems(listId) {
@@ -49,6 +50,7 @@ class Likes extends React.Component {
         <div className="likes-wrapper">
           <ul className="likes-container">{this.showItems(2)}</ul>
         </div>
+        <Dock />
       </div>
     );
   }

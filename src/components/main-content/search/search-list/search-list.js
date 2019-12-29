@@ -9,10 +9,12 @@ class SearchList extends React.Component {
 
     this.state = {
       items: [],
-      isConsist: false
+      isConsist: false,
+      isVisible: true
     };
 
     this.showItems = this.showItems.bind(this);
+    this.hideItems = this.hideItems.bind(this);
   }
 
   componentDidMount() {
@@ -34,12 +36,18 @@ class SearchList extends React.Component {
               key={item.id}
               url={item.download_url}
               name={item.author}
+              hideItems={this.hideItems}
             />
         );
       });
     } else {
       return [];
     }
+  }
+
+  hideItems () {
+    // this.setState({isVisible: false})
+    console.log("hidden");
   }
 
   render() {

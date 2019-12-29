@@ -1,6 +1,7 @@
 import React from "react";
 import "./search.css";
 import SearchList from "./search-list";
+import Dock from "../bottom-dock";
 
 class Search extends React.Component {
   render() {
@@ -10,6 +11,7 @@ class Search extends React.Component {
            <input type="search" placeholder="Search" maxLength="15" />
        </header>
        <SearchList />
+       <Dock />
     </div>
     );
   }

@@ -1,3 +1,7 @@
+.enter-window-wrapper {
+    position: relative;
+}
+
 .enter-reg-form {
     position: relative;
 }

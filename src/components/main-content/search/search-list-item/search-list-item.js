@@ -1,22 +1,35 @@
 import React from "react";
 import "./search-list-item.css";
-import like from "../../../../imgs/icons/like24.png";
-import comment from "../../../../imgs/icons/commnet24.png";
-import { LazyLoadComponent } from 'react-lazy-load-image-component';
+import Post from "./post";
 
 class SearchListItem extends React.Component {
+
+  constructor (props) {
+    super(props);
+
+    this.state = {
+      isClicked: false
+    }
+
+    this.hidePost = this.hidePost.bind(this);
+  }
+
+  hidePost () {
+    this.setState({isClicked: false});
+  }
+
   render() {
+    
+
+    const post = this.state.isClicked ? <Post src={this.props.url} hide={this.hidePost}/> : null;
+
     return (
+      <React.Fragment>
       <li className="search-item">
-        <img src={this.props.url} alt="search-item" />
-        <p className="author">
-            <LazyLoadComponent>
-            <img src={like} alt="item like" />
-            <img src={comment} alt="comment" />
-            </LazyLoadComponent>
-            <span>{this.props.name}</span>
-        </p>
+        <img className="search-img" src={this.props.url} alt="search-item" onClick={() => {this.setState({isClicked: true}); this.props.hideItems()}}/>
       </li>
+      {post}
+      </React.Fragment>
     );
   }
 }

@@ -7,10 +7,12 @@ import gallery from '../../../imgs/icons/grid24.png';
 import share from '../../../imgs/icons/picture24.png';
 import save from '../../../imgs/icons/save24.png';
 import contacts from '../../../imgs/icons/contact-book24.png';
+import Dock from '../bottom-dock';
 
 class Profile extends React.Component {
     render () {
         return (
+            <React.Fragment>
             <div className="user-profile">
                 <nav>
                     <img src={set} alt="Settings" />
@@ -50,6 +52,8 @@ class Profile extends React.Component {
                     </div>
                 </section>
             </div>
+            <Dock />
+            </React.Fragment>
         )
     }
 } 

@@ -36,8 +36,8 @@ class EnterWindow extends React.Component {
     event.preventDefault();
     const login = document.querySelector(".login");
     const pswd = document.querySelector(".pswd-container");
-    const login_value = "Dima";
-    const pswd_value = "123";
+    const login_value = "1";
+    const pswd_value = "1";
     const { loginCheck } = this.props;
     if (login.value === login_value && pswd.value === pswd_value) {
       history.replace("/daily");
@@ -53,11 +53,8 @@ class EnterWindow extends React.Component {
 
   render() {
     return (
-      <div>
-        {this.state.isWarning ? (
-          <Warning hide={this.handleWarningWindow}/>
-        ) : (
-          <div>
+          <div className="enter-window-wrapper">
+            {this.state.isWarning?<Warning hide={this.handleWarningWindow}/> : null}
             <img className="logo-print" src={printedLogo} alt="print-logo" />
             <form className="reg-form enter-reg-form">
               <input
@@ -98,8 +95,6 @@ class EnterWindow extends React.Component {
             </form>
             <Footer />
           </div>
-        )}
-      </div>
     );
   }
 }
