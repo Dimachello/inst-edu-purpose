@@ -1,0 +1,34 @@
+.comment {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    padding: 0.2rem 0.1rem 0.5rem 0rem;
+}
+
+.comment > li {
+    flex-basis: 50%;
+    text-align: start;
+    font-size: 0.9rem;
+}
+
+.comment > li:first-child {
+    flex-basis: 10%;
+}
+
+.comment > li:last-child {
+    flex-basis: 10%;
+}
+
+.comment > li:nth-last-child(3) {
+    flex-basis: 20%;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.comment > li > img {
+    display: block;
+    max-width: 2rem;
+    height: auto;
+    border-radius: 50%;
+}

@@ -56,11 +56,24 @@ const recomendItems = Array(6).fill().map((item,idx) => {
         )
 });
 
+const commentsPhrases = [
+    'cooool', 'very nice', 'beautiful photos', 'love u', 'great stuf', 'good luck'
+];
+const commentItems = Array(6).fill().map((item,idx) => {
+    return {
+        id: idx,
+        profilePhotoUrl:recomendImages[idx],
+        nick: recomendNick[idx],
+        phrase: commentsPhrases[idx]
+    }
+});
+
 const initialState = {
     loginConfirmed: false,
     dailyItems: dailyItems,
     activityItems: activityItems,
-    recomendationItems: recomendItems
+    recomendationItems: recomendItems,
+    commentItems: commentItems
 };
 
 const reducer = (state = initialState, action) => {

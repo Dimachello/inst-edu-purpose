@@ -1,5 +1,6 @@
 .post {
     min-height: inherit;
+    padding-bottom: 3.7rem;
 }
 
 .post-top {
@@ -32,31 +33,52 @@
 
 .post-info {
     display: flex;
-    justify-content: space-between;
-    padding: 0.3rem 0.3rem;
-}
-
-.post-info > span {
-    flex-basis: 20%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.post-info > span > img {
-    display: block;
+    justify-content: space-around;
+    padding: 0.5rem 0.3rem 0.5rem 0.3rem;
 }
 
 .post-info > img {
+    flex-basis: 7%;
     display: block;
+    cursor: pointer;
 }
 
-.comment {
-    min-height: 10rem;
+.comments {
+    border-top: 0.1rem solid #999;
+    padding: 0.5rem 0rem 0.5rem 1.7rem;
+}
+
+.comment-input {
+    width: 80%;
+}
+
+.add-comment {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 0.2rem;
 }
 
-.comment > input {
-    align-content: flex-end;
+.add-comment > input {
+    display: block;
+    flex-basis: 77%;
+    padding-left: 0.3rem;
+    border: 0.1rem solid #999;
+    font-size: 0.8rem;
+    line-height: 1.7rem;
+    border-radius: 0.25rem;
 }
+
+.add-comment > button {
+    flex-basis: 20%;
+    display: block;
+    width: 100%;
+    border: 0.1rem solid #999;
+    background-color: rgba(var(--h5f,56,151,240),1);
+    color: rgba(var(--eca,255,255,255),1);
+    border-radius: 0.25rem;
+    cursor: pointer;
+    line-height: 1.7rem;
+}
+
+
