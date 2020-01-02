@@ -50,8 +50,12 @@
     flex-wrap: wrap;
 }
 
+.saved-photo-list > li {
+    max-width: 50%;
+}
+
 .saved-photo-list > li > img {
     display: block;
-    max-width: 10.3rem;
+    max-width: 100%;
     min-height: 8rem;
 }
