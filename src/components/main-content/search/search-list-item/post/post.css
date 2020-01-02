@@ -1,5 +1,4 @@
 .post {
-    min-height: inherit;
     padding-bottom: 3.7rem;
 }
 
@@ -37,10 +36,16 @@
     padding: 0.5rem 0.3rem 0.5rem 0.3rem;
 }
 
-.post-info > img {
-    flex-basis: 7%;
+.post-info > span > img {
+    /* flex-basis: 7%; */
     display: block;
     cursor: pointer;
+}
+
+.post-info > span {
+    flex-basis: 7%;
+    padding: 0.3rem;
+    border-radius: 0.25rem;
 }
 
 .comments {

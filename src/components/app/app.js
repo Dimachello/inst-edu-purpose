@@ -9,6 +9,7 @@ import Search from "../main-content/search";
 import UploadFiles from "../main-content/upload-files";
 import Likes from "../main-content/likes";
 import Profile from "../main-content/profile";
+// import Saved from '../main-content/profile/saved';
 import Error from '../404/error';
 
 class App extends React.Component {
@@ -24,6 +25,7 @@ class App extends React.Component {
           <Route path="/upload" component={UploadFiles} />
           <Route path="/likes" component={Likes} />
           <Route path="/user" component={Profile} />
+          {/* <Route path="/user/saved" render={() => <Saved />} /> */}
           <Route render={() => <Error />} />
         </Switch>
       </React.Fragment>

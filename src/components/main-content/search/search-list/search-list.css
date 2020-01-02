@@ -3,4 +3,6 @@
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 3.5rem;
+    max-height: 100vh;
+    overflow: auto;
 }

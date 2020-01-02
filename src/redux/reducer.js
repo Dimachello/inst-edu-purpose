@@ -68,18 +68,23 @@ const commentItems = Array(6).fill().map((item,idx) => {
     }
 });
 
+let savedItems = [];
+
 const initialState = {
     loginConfirmed: false,
     dailyItems: dailyItems,
     activityItems: activityItems,
     recomendationItems: recomendItems,
-    commentItems: commentItems
+    commentItems: commentItems,
+    savedItems: savedItems
 };
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
         case "LOGIN_CONFIRMED":
             return {...state, loginConfirmed : !state.loginConfirmed};
+        case "POST_SAVED":
+            return {...state, savedItems: [...state.savedItems,action.payload]};
         default :
             return state;
     }

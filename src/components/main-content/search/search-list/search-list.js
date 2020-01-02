@@ -6,6 +6,9 @@ import Spinner from "../../../spinner/spinner";
 import Post from "../search-list-item/post/post";
 
 class SearchList extends React.Component {
+
+  ulScrollPosition = React.createRef(null);
+
   constructor(props) {
     super(props);
 
@@ -14,11 +17,14 @@ class SearchList extends React.Component {
       isConsist: false,
       isClicked: false,
       postUrl: "",
-      postAuthor: ""
+      postAuthor: "",
+      position: ""
     };
-
+    
+    this.handleScrollPositionValue = this.handleScrollPositionValue.bind(this);
     this.showItems = this.showItems.bind(this);
     this.handlePost = this.handlePost.bind(this);
+    this.hidePost = this.hidePost.bind(this);
   }
 
   componentDidMount() {
@@ -32,7 +38,14 @@ class SearchList extends React.Component {
       });
   }
 
-  handlePost (url,author) {
+  handleScrollPositionValue () {
+    const ulScrollPositionValue = this.ulScrollPosition.current.scrollTop;
+    this.setState({
+      position: ulScrollPositionValue
+    });
+  }
+
+  handlePost(url, author) {
     this.setState({
       isClicked: !this.state.isClicked,
       postUrl: url,
@@ -40,16 +53,24 @@ class SearchList extends React.Component {
     });
   }
 
+  hidePost() {
+    this.setState({
+      isClicked: !this.state.isClicked
+    },
+    () => {this.ulScrollPosition.current.scrollTop = this.state.position}
+    );
+  }
+
   showItems() {
     if (this.state.isConsist) {
       return this.state.items.map(item => {
         return (
-            <SearchListItem
-              key={item.id}
-              url={item.download_url}
-              author={item.author}
-              showPost={this.handlePost}
-            />
+          <SearchListItem
+            key={item.id}
+            url={item.download_url}
+            author={item.author}
+            showPost={this.handlePost}
+          />
         );
       });
     } else {
@@ -58,22 +79,32 @@ class SearchList extends React.Component {
   }
 
   render() {
-    const list = <React.Fragment>
-      <SearchHeader />
-      <ul className="search-list">{this.showItems()}</ul>
+    const list = (
+      <React.Fragment>
+        <SearchHeader />
+        <ul 
+        ref={this.ulScrollPosition}
+        className="search-list"
+        onScroll={this.handleScrollPositionValue}
+        >{this.showItems()}</ul>
       </React.Fragment>
-    const content = this.state.isClicked ? <Post 
-    hidePost={this.handlePost}
-    url={this.state.postUrl}
-    author={this.state.postAuthor}
-    /> : list;
+    );
+    const content = this.state.isClicked ? (
+      <Post
+        hidePost={this.hidePost}
+        url={this.state.postUrl}
+        author={this.state.postAuthor}
+      />
+    ) : (
+      list
+    );
 
     return (
       <React.Fragment>
-      <Spinner isHidden={this.state.isConsist}/>
-       {content}
+        <Spinner isHidden={this.state.isConsist} />
+        {content}
       </React.Fragment>
-    )
+    );
   }
 }
 
