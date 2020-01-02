@@ -9,7 +9,6 @@ import Comment from "./post-comment";
 import { connect } from "react-redux";
 
 class Post extends React.Component {
-
   constructor(props) {
     super(props);
 
@@ -19,14 +18,16 @@ class Post extends React.Component {
       isAdd: false,
       comments: commentsData,
       newComment: "",
-      bookmarkBgk: ""
+      like: "",
+      comment: "",
+      mark: ""
     };
 
     this.showComments = this.showComments.bind(this);
     this.handleCommentShow = this.handleCommentShow.bind(this);
     this.receiveCommentText = this.receiveCommentText.bind(this);
     this.submitComment = this.submitComment.bind(this);
-    this.changeBookmarkBgk = this.changeBookmarkBgk.bind(this);
+    this.changeBgk = this.changeBgk.bind(this);
   }
 
   showComments() {
@@ -73,10 +74,10 @@ class Post extends React.Component {
     });
   }
 
-  changeBookmarkBgk () {
+  changeBgk(event) {
     this.setState({
-      bookmarkBgk: "rgb(242, 31, 42)"
-    })
+      [event.target.name]: "rgb(235, 64, 52)"
+    });
   }
 
   render() {
@@ -107,21 +108,35 @@ class Post extends React.Component {
           </header>
           <img className="search-img" src={this.props.url} alt="post" />
           <div className="post-info">
-            <span>
-            <img src={like} alt="post like"/>
+            <span style={{ backgroundColor: this.state.like }}>
+              <img
+                name="like"
+                src={like}
+                alt="post like"
+                onClickCapture={this.changeBgk}
+              />
             </span>
-            <span>
-            <img src={comment} alt="comment" onClick={this.handleCommentShow} />
+            <span style={{ backgroundColor: this.state.comment }}>
+              <img
+                name="comment"
+                src={comment}
+                alt="comment"
+                onClickCapture={event => {
+                  this.handleCommentShow();
+                  this.changeBgk(event);
+                }}
+              />
             </span>
-            <span style={{backgroundColor: this.state.bookmarkBgk}}>
-            <img
-              src={bookmark}
-              alt="bookmark"
-              onClickCapture={() => {
-                this.props.postSaved(this.props.url);
-                this.changeBookmarkBgk();
-              }}
-            />
+            <span style={{ backgroundColor: this.state.mark }}>
+              <img
+                name="mark"
+                src={bookmark}
+                alt="bookmark"
+                onClickCapture={event => {
+                  this.props.postSaved(this.props.url);
+                  this.changeBgk(event);
+                }}
+              />
             </span>
           </div>
           <div className="comments">{this.showComments()}</div>
@@ -141,10 +156,10 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    postSaved: (url) =>
+    postSaved: url =>
       dispatch({
         type: "POST_SAVED",
-        payload: {url: url}
+        payload: { url: url }
       })
   };
 };

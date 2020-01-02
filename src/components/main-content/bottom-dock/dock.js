@@ -23,7 +23,7 @@ const Dock = () => {
               <Link className="chap-link" to="/likes"><img src={like} alt="like"/></Link>
           </div>
           <div className="chapter">
-              <Link className="chap-link" to="/user"><img src={user} alt="user"/></Link>
+              <Link className="chap-link" to="/user/photos"><img src={user} alt="user"/></Link>
           </div>
         </nav>
     )

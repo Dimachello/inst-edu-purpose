@@ -1,8 +1,8 @@
-.saved-wrapper {
+.empty-wrapper {
     padding: 3rem 2rem 7rem 2rem;
 }
 
-.saved-empty-container {
+.empty-container {
     /* padding: 3rem 2rem 6rem 2rem; */
     display: flex;
     flex-direction: column;
@@ -24,11 +24,11 @@
     margin: auto;
 } 
 
-.saved-title {
+.empty-title {
     margin-bottom: 0.5rem;
 }
 
-.saved-paragraph {
+.empty-paragraph {
     text-align: center;
     font-size: 0.8rem;
 }

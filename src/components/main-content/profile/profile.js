@@ -8,19 +8,11 @@ import share from '../../../imgs/icons/picture24.png';
 import save from '../../../imgs/icons/save24.png';
 import contacts from '../../../imgs/icons/contact-book24.png';
 import Saved from './saved';
+import Photos from './photos/photos';
 import { Route, Link } from 'react-router-dom';
 import Dock from '../bottom-dock';
 
 class Profile extends React.Component {
-
-    // constructor(props){
-    //     super(props);
-
-    //     this.state = {
-            
-    //     }
-    // }
-
     render () {
         return (
             <React.Fragment>
@@ -56,13 +48,14 @@ class Profile extends React.Component {
                 </section>
                 <section className="photos">
                    <div>
-                    <img src={gallery} alt="gallery" />
+                    <Link to="/user/photos"><img src={gallery} alt="gallery" /></Link>
                     <img src={share} alt="share" />
                     <Link to="/user/saved"><img src={save} alt="saved" /></Link>
                     <img src={contacts} alt="contacts" />
                     </div>
                 </section>
                 <Route path="/user/saved" render={() => <Saved />} />
+                <Route path="/user/photos" render={() => <Photos />} />
             </div>
             <Dock />
             </React.Fragment>
