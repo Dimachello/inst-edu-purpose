@@ -13,7 +13,6 @@ class Post extends React.Component {
     super(props);
 
     const commentsData = this.props.commentItems;
-    // const likesNumber = 1324;
 
     this.state = {
       isAdd: false,

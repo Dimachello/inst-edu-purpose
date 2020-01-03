@@ -1,3 +1,7 @@
+.recomend-item {
+    width: 100%;
+}
+
 .recomend-info > img {
     max-height: 3rem;
     display: block;

@@ -48,7 +48,7 @@ class Likes extends React.Component {
         </div>
         <p className="suggest">Suggestions for you</p>
         <div className="likes-wrapper">
-          <ul className="likes-container">{this.showItems(2)}</ul>
+          <ul className="like-container">{this.showItems(2)}</ul>
         </div>
         <Dock />
       </div>
