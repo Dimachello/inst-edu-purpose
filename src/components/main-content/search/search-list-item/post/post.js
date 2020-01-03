@@ -13,14 +13,17 @@ class Post extends React.Component {
     super(props);
 
     const commentsData = this.props.commentItems;
+    // const likesNumber = 1324;
 
     this.state = {
       isAdd: false,
       comments: commentsData,
       newComment: "",
-      like: "",
+      like: "#fff",
+      likeColor: "",
       comment: "",
-      mark: ""
+      mark: "",
+      likesCounter: 1324
     };
 
     this.showComments = this.showComments.bind(this);
@@ -28,6 +31,7 @@ class Post extends React.Component {
     this.receiveCommentText = this.receiveCommentText.bind(this);
     this.submitComment = this.submitComment.bind(this);
     this.changeBgk = this.changeBgk.bind(this);
+    this.incLikeCounter = this.incLikeCounter.bind(this);
   }
 
   showComments() {
@@ -80,6 +84,21 @@ class Post extends React.Component {
     });
   }
 
+  incLikeCounter() {
+    if (this.state.like === "#fff") {
+    this.setState({
+      likesCounter: this.state.likesCounter + 1,
+      likeColor: "#fff"
+    });
+  } else {
+    this.setState({
+      likesCounter: this.state.likesCounter - 1,
+      like: "#fff",
+      likeColor: "#000"
+    });
+  }
+  }
+
   render() {
     const inputComment = (
       <div className="add-comment" id="add-text">
@@ -108,13 +127,20 @@ class Post extends React.Component {
           </header>
           <img className="search-img" src={this.props.url} alt="post" />
           <div className="post-info">
-            <span style={{ backgroundColor: this.state.like }}>
+            <span
+              style={{ backgroundColor: this.state.like }}
+              className="likes-container"
+            >
               <img
                 name="like"
                 src={like}
                 alt="post like"
-                onClickCapture={this.changeBgk}
+                onClickCapture={(event) => {
+                  this.changeBgk(event);
+                  this.incLikeCounter();
+                }}
               />
+              <span className="likes-counter" style={{ color: this.state.likeColor }}>{this.state.likesCounter}</span>
             </span>
             <span style={{ backgroundColor: this.state.comment }}>
               <img

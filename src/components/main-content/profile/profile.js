@@ -9,6 +9,8 @@ import save from '../../../imgs/icons/save24.png';
 import contacts from '../../../imgs/icons/contact-book24.png';
 import Saved from './saved';
 import Photos from './photos/photos';
+import Tagged from './tagged/tagged';
+import Feed from './feed/feed';
 import { Route, Link } from 'react-router-dom';
 import Dock from '../bottom-dock';
 
@@ -49,13 +51,15 @@ class Profile extends React.Component {
                 <section className="photos">
                    <div>
                     <Link to="/user/photos"><img src={gallery} alt="gallery" /></Link>
-                    <img src={share} alt="share" />
+                    <Link to="/user/feed"><img src={share} alt="share" /></Link>
                     <Link to="/user/saved"><img src={save} alt="saved" /></Link>
-                    <img src={contacts} alt="contacts" />
+                    <Link to="/user/tagged"><img src={contacts} alt="contacts" /></Link>
                     </div>
                 </section>
-                <Route path="/user/saved" render={() => <Saved />} />
                 <Route path="/user/photos" render={() => <Photos />} />
+                <Route path="/user/feed" render={() => <Feed />} />
+                <Route path="/user/saved" render={() => <Saved />} />
+                <Route path="/user/tagged" render={() => <Tagged />} />
             </div>
             <Dock />
             </React.Fragment>
