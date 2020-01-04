@@ -157,10 +157,17 @@ class Post extends React.Component {
                 name="mark"
                 src={bookmark}
                 alt="bookmark"
-                onClickCapture={event => {
-                  this.props.postSaved(this.props.url);
+                onClick={event => {
+                  const exist = (item) => item.url === this.props.url;
+                  let check = this.props.savedItems.some(exist)
+                  if(!check){
+                    this.props.postSaved(this.props.url)
+                  } else {
+                    return 0;
+                  }
                   this.changeBgk(event);
-                }}
+                }
+              }
               />
             </span>
           </div>
@@ -181,11 +188,14 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    postSaved: url =>
+    postSaved: (url) => {
+    //  let check = false;
+     
       dispatch({
         type: "POST_SAVED",
         payload: { url: url }
       })
+    }
   };
 };
 

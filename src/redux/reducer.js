@@ -68,7 +68,10 @@ const commentItems = Array(6).fill().map((item,idx) => {
     }
 });
 
-let savedItems = [];
+let savedItems = [
+    // {url: "https://picsum.photos/id/0/5616/3744"}
+    // {url: "https://picsum.photos/id/10/2500/1667"}
+];
 
 const initialState = {
     loginConfirmed: false,
